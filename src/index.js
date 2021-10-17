@@ -1,12 +1,15 @@
 const TelegramBot = require('node-telegram-bot-api')
 const cron = require('node-cron')
+const dotenv = require('dotenv');
 const Task = require('./Resources/TaskController')
 const Util = require('./Util')
 const createTables = require('./Repository/createTables')
 
+dotenv.config()
+
 createTables.createTables();
 
-const TOKEN = '' // Necessário adicionar token
+const TOKEN = process.env.TELEGRAM_TOKEN
 
 const bot = new TelegramBot(TOKEN, { polling: true })
 Task.cleanOldTasks()

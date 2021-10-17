@@ -37,7 +37,7 @@ npm run start
 # Próximos passos
 
 - [ ] Migrar de SQLite para MongoDB
-- [ ] Adicionar .env
+- [X] Adicionar .env
 - [ ] Identificar possíveis novos comandos
 - [ ] Disponibilizar para o público em geral
 
